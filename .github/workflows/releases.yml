@@ -105,6 +105,7 @@ jobs:
             -Executable "${{ steps.buildmsi.outputs.msi }}"
       - name: Upload MSI
         shell: bash
-        run: bin/hub release edit "${GITHUB_REF#refs/tags/}" -m "" -a "${{ steps.buildmsi.outputs.msi }}"
+        run: bin/hub release edit "${GITHUB_REF#refs/tags/}" -m "" -a "${{
+          steps.buildmsi.outputs.msi }}"
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
