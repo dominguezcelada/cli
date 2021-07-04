@@ -1,7 +1,7 @@
 name: Code Scanning
 
 on:
-  push:
+  push: null
   schedule:
     - cron: "0 0 * * 0"
 
